@@ -125,16 +125,14 @@ h1,h2,.num{font-family:var(--titulo);font-weight:900;text-transform:uppercase;le
 .piloto h2{font-size:66px;margin:16px 0 12px}
 .piloto h2 span{color:var(--lime)}
 .piloto .lead{font-size:18px;opacity:.85;margin-bottom:28px}
-.lojas{display:grid;grid-template-columns:repeat(10,1fr);gap:7px;width:470px}
-.lojas i{aspect-ratio:1;display:block;background:#2b2b30;transform:scale(.4);opacity:0;transition:transform .4s,opacity .4s}
-.piloto.ativa .lojas i{transform:scale(1);opacity:1}
-.lojas i.b{background:var(--teal)}
-.lojas i.c{background:var(--lime)}
-.legenda{display:flex;flex-direction:column;gap:8px;margin-top:18px;font-size:15px}
-.legenda span{display:flex;align-items:center;gap:12px}
-.legenda span::before{content:'';width:18px;height:18px;background:#2b2b30;flex:none}
-.legenda .b::before{background:var(--teal)}
-.legenda .c::before{background:var(--lime)}
+.onda{display:grid;grid-template-columns:repeat(12,1fr);gap:8px;width:680px;margin-top:40px}
+.onda .seg{position:relative}
+.onda .seg i{display:block;height:64px;background:#2b2b30;transform:scaleX(0);transform-origin:left;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.piloto.ativa .onda .seg i{transform:scaleX(1)}
+.onda .s1{grid-column:span 2}.onda .s2{grid-column:span 3}.onda .s3{grid-column:span 2}.onda .s4{grid-column:span 5}
+.onda .s2 i{background:var(--teal)}.onda .s3 i{background:var(--lime)}.onda .s4 i{background:repeating-linear-gradient(90deg,var(--lime) 0 10px,rgba(192,238,78,.35) 10px 20px)}
+.onda .seg em{display:block;font:700 12px/1.3 var(--mono);font-style:normal;letter-spacing:.04em;text-transform:uppercase;opacity:.65;margin-top:10px}
+.onda .seg b{display:block;font-family:var(--titulo);font-weight:900;font-size:22px;line-height:1.05;text-transform:uppercase;margin-top:4px}
 .piloto .dir{position:absolute;left:820px;top:130px;width:708px}
 .etapas{list-style:none;margin-top:22px;border-left:2px solid rgba(242,241,233,.18)}
 .etapas li{position:relative;padding:0 0 22px 34px}
@@ -227,7 +225,7 @@ body.tem-mouse #cursor{display:block}
       <div class="aroma"><i style="background:#e0457b"></i><b>Passion</b></div>
       <div class="aroma"><i style="background:#c9a23f"></i><b>Luxury</b></div>
     </div>
-    <p class="nota anima d3">As cinco fragrâncias do lançamento de 2025 (SuperHiper/ABRAS, 17/03/2025). Cores ilustrativas; o sortimento do piloto é o da rede escolhida.</p>
+    <p class="nota anima d3">As cinco fragrâncias do lançamento de 2025 (SuperHiper/ABRAS, 17/03/2025). Cores ilustrativas; o sortimento é o da rede escolhida.</p>
     <div class="grao"></div>
     <aside class="roteiro" hidden>A ideia é simples: transformar a gôndola num lugar de escolha. Em vez de cinco frascos parecidos, o shopper encontra cinco perfumes, cada um com cor, nome e um motivo para levar. Escolha o perfume da sua casa vira a frase que organiza peças, comunicação e promotor.</aside>
   </section>
@@ -267,51 +265,55 @@ body.tem-mouse #cursor{display:block}
         <div class="parada anima d1"><div class="bola"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5"><rect x="10" y="10" width="18" height="18"/><rect x="36" y="10" width="18" height="18"/><rect x="10" y="36" width="18" height="18"/><path d="M38 38h6v6h-6zM50 50h4M50 38v6M38 50h6"/></svg></div><span class="tag">Na peça</span><h3>QR em cada material</h3><p>Toda peça sai da fábrica com um código único.</p></div>
         <div class="parada anima d2"><div class="bola"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M32 56s16-15 16-28a16 16 0 0 0-32 0c0 13 16 28 16 28z"/><circle cx="32" cy="28" r="6"/></svg></div><span class="tag">One Shot</span><h3>Montagem comprovada</h3><p><b>O que é:</b> o promotor escaneia ao instalar. <b>Benefício:</b> foto e GPS provam que entrou na loja.</p></div>
         <div class="parada anima d3"><div class="bola"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5"><circle cx="32" cy="32" r="22"/><path d="M32 18v14l9 6"/></svg></div><span class="tag">On Timing</span><h3>Ao vivo, todo dia</h3><p><b>O que é:</b> uma tag no display avisa todo dia. <b>Benefício:</b> você sabe se segue montado e no lugar.</p></div>
-        <div class="parada forte anima d4"><div class="bola"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M10 52V30M24 52V18M38 52V36M52 52V12"/></svg></div><span class="tag">No seu painel</span><h3>Execução e giro juntos</h3><p>Lojas com a inovação exposta, ruptura e venda no mesmo relatório.</p></div>
+        <div class="parada forte anima d4"><div class="bola"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M10 52V30M24 52V18M38 52V36M52 52V12"/></svg></div><span class="tag">No seu painel</span><h3>Execução loja a loja</h3><p>Onde está montada, no lugar e abastecida, num relatório só.</p></div>
       </div>
     </div>
-    <aside class="roteiro" hidden>Toda peça sai da fábrica com um QR único. No One Shot, o promotor escaneia ao instalar e a foto com GPS prova que a peça entrou na loja. No On Timing, uma tag no display avisa todo dia se ela segue montada e no lugar. Tudo cai num painel junto com ruptura e venda.</aside>
+    <aside class="roteiro" hidden>Toda peça sai da fábrica com um QR único. No One Shot, o promotor escaneia ao instalar e a foto com GPS prova que a peça entrou na loja. No On Timing, uma tag no display avisa todo dia se ela segue montada e no lugar. Tudo cai num painel que mostra, loja a loja, onde a inovação está montada, no lugar e abastecida.</aside>
   </section>
 
-  <!-- 06 · piloto e entrega 75 LAB -->
-  <section class="tela escuro piloto" data-titulo="O piloto">
+  <!-- 06 · o projeto e a entrega 75 LAB -->
+  <section class="tela escuro piloto" data-titulo="O projeto">
     <div class="marcas"><span class="eyebrow"><b>(06)</b> O projeto</span></div>
     <div class="esq">
-      <h2 class="anima">Piloto de 12 semanas. <span>Resultado antes de escalar.</span></h2>
-      <p class="lead anima d1">30 lojas parecidas, em três grupos. A diferença entre eles mostra o que vende a mais.</p>
-      <div class="lojas anima d2" id="lojas"></div>
-      <div class="legenda anima d3"><span class="a">10 lojas como hoje</span><span class="b">10 lojas com as peças</span><span class="c">10 lojas com as peças e a experiência de aroma</span></div>
+      <h2 class="anima">12 semanas. <span>Da fábrica à gôndola, em toda a rede.</span></h2>
+      <p class="lead anima d1">Sem fase de teste: a primeira onda já entra em todas as lojas da rede escolhida.</p>
+      <div class="onda anima d2">
+        <div class="seg s1"><i></i><em>Sem. 1 e 2</em><b>Visita e criação</b></div>
+        <div class="seg s2"><i style="transition-delay:.25s"></i><em>Sem. 3 a 6</em><b>Produção com QR</b></div>
+        <div class="seg s3"><i style="transition-delay:.5s"></i><em>Sem. 7</em><b>Instalação</b></div>
+        <div class="seg s4"><i style="transition-delay:.75s"></i><em>Sem. 8 a 12</em><b>Leitura ao vivo, loja a loja</b></div>
+      </div>
     </div>
     <div class="dir">
       <span class="eyebrow anima"><b>75 LAB</b> faz de ponta a ponta</span>
       <ol class="etapas anima d1">
-        <li><b>Diagnóstico</b><span>Rede, SKUs, fotos e medidas das lojas.</span></li>
+        <li><b>Visita às lojas</b><span>Fotos e medidas da rede escolhida, sem pedir planilha.</span></li>
         <li><b>Criação e protótipo</b><span>Peças testadas na rotina da loja.</span></li>
         <li><b>Produção e instalação</b><span>Fábrica, logística e montagem com foto.</span></li>
         <li><b>Treino da operação</b><span>Guia de montagem e reposição para promotores.</span></li>
-        <li><b>Leitura e decisão</b><span>Quanto vendeu a mais e quanto custou por loja.</span></li>
+        <li><b>Leitura semanal</b><span>Loja a loja: montada, no lugar e abastecida.</span></li>
       </ol>
-      <div class="resultado anima d2">No fim, <b>uma decisão com número</b>: ampliar, ajustar ou parar.</div>
+      <div class="resultado anima d2">No fim, <b>a prova loja a loja</b> para levar a próxima inovação a outras redes.</div>
     </div>
-    <p class="fonte">Piloto ilustrativo para discussão. Número de lojas, rede e prazo são ajustados no diagnóstico com os dados da Bombril.</p>
-    <aside class="roteiro" hidden>Propomos um piloto de 12 semanas em 30 lojas parecidas, divididas em três grupos: como hoje, com as peças e com as peças mais a experiência de aroma. A 75 LAB faz de ponta a ponta, do diagnóstico à leitura. No fim, a Bombril decide com número: ampliar, ajustar ou parar.</aside>
+    <p class="fonte">Prazo ajustado na visita às lojas da rede escolhida.</p>
+    <aside class="roteiro" hidden>Em 12 semanas a inovação sai da fábrica e chega a todas as lojas da rede escolhida, sem fase de teste. A 75 LAB faz de ponta a ponta: visita as lojas, cria, produz com QR, instala, treina os promotores e lê toda semana, loja a loja, onde a peça está montada, no lugar e abastecida. Essa prova leva a próxima inovação a outras redes.</aside>
   </section>
 
   <!-- 07 · próximo passo -->
   <section class="tela lime fim" data-titulo="Próximo passo">
     <div class="marcas"><span class="eyebrow">(07) Próximo passo</span></div>
     <div class="pergunta">
-      <h2 class="anima">Qual inovação e qual rede vocês escolhem para o teste?</h2>
+      <h2 class="anima">Qual inovação e qual rede vocês escolhem para começar?</h2>
       <div class="acoes anima d1">
         <a class="botao cheio seta" href="https://wa.me/5511986765634?text=Ol%C3%A1%2C%20vi%20a%20proposta%20da%2075%20LAB%20para%20a%20Bombril" target="_blank" rel="noopener">Fale conosco no WhatsApp</a>
-        <a class="botao seta" href="mailto:daniel.coimbra@75lab.com.br?subject=Bombril%20%C3%97%2075%20LAB%20%C2%B7%20piloto">Marcar a conversa de trabalho</a>
+        <a class="botao seta" href="mailto:daniel.coimbra@75lab.com.br?subject=Bombril%20%C3%97%2075%20LAB">Marcar a conversa de trabalho</a>
       </div>
     </div>
     <div class="rodape anima d2">
       <div><img src="assets/75lab-black.png" alt="75 LAB">Daniel Coimbra, CEO · daniel.coimbra@75lab.com.br<br>Caique Becker, Head de Trade · caique.becker@75lab.com.br<br>contato@75lab.com.br · 75lab.com.br</div>
       <small>75 LAB Estratégia, Design e Produção Ltda · CNPJ 55.470.982/0001-77 · CENU, Torre Norte, Av. das Nações Unidas, 12.901, Brooklin, São Paulo, SP</small>
     </div>
-    <aside class="roteiro" hidden>Para começar, precisamos de duas escolhas: qual inovação entra no teste e em qual rede. Com isso, em uma semana trazemos o diagnóstico das lojas e o desenho final das peças. O botão leva direto para o nosso WhatsApp.</aside>
+    <aside class="roteiro" hidden>Para começar, precisamos de duas escolhas: qual inovação e em qual rede. Com isso, em uma semana trazemos o diagnóstico das lojas e o desenho final das peças. O botão leva direto para o nosso WhatsApp.</aside>
   </section>
 
   <div id="nav"><i></i></div>
@@ -330,9 +332,6 @@ body.tem-mouse #cursor{display:block}
   let atual=0;
   function escala(){const s=Math.min(innerWidth/1600,innerHeight/900);stage.style.transform='scale('+s+')';}
   addEventListener('resize',escala);escala();
-  // grade das 30 lojas do piloto
-  const lojas=document.getElementById('lojas');
-  for(let i=0;i<30;i++){const q=document.createElement('i');q.className=i<10?'a':i<20?'b':'c';q.style.transitionDelay=(i*25)+'ms';lojas.appendChild(q);}
   function contar(el){
     const alvo=parseFloat(el.dataset.conta),casas=+el.dataset.casas||0,t0=performance.now(),dur=1100;
     (function passo(t){const p=Math.min(1,(t-t0)/dur),v=alvo*(1-Math.pow(1-p,3));el.textContent=v.toFixed(casas).replace('.',',');if(p<1)requestAnimationFrame(passo);})(t0);

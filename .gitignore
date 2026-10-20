@@ -1,2 +1,5 @@
 fonte/kv/*.psd
 fonte/kv/kv_base.png
+fonte/pecas/
+fonte/executivo/saida/
+__pycache__/

@@ -47,11 +47,11 @@ h1,h2,.num{font-family:var(--titulo);font-weight:900;text-transform:uppercase;le
 
 /* 01 capa */
 .capa{background:#000}
-.capa .foto{position:absolute;inset:0;background:url(assets/kv-loja.jpg) center/cover;transform:scale(1.04);transition:transform 8s ease}
+.capa .foto{position:absolute;inset:0;background:url(assets/kv-final.jpg) right center/cover;transform:scale(1.04);transition:transform 8s ease}
 .capa.ativa .foto{transform:scale(1)}
-.capa .veu{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.94) 0%,rgba(5,5,5,.78) 38%,rgba(5,5,5,.15) 70%,rgba(5,5,5,.05) 100%)}
-.capa .texto{position:absolute;left:72px;bottom:96px;width:760px}
-.capa h1{font-size:104px;margin:22px 0 22px}
+.capa .veu{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.95) 0%,rgba(5,5,5,.86) 30%,rgba(5,5,5,.25) 43%,rgba(5,5,5,0) 52%)}
+.capa .texto{position:absolute;left:72px;bottom:96px;width:560px}
+.capa h1{font-size:88px;margin:22px 0 22px}
 .capa h1 span{color:var(--lime)}
 .capa .lead{font-size:21px;margin-bottom:34px;opacity:.9}
 
@@ -75,34 +75,78 @@ h1,h2,.num{font-family:var(--titulo);font-weight:900;text-transform:uppercase;le
 .desafio .disputa{margin-top:28px;display:flex;gap:14px;align-items:center;font-size:16px}
 .desafio .disputa .selo{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.1em;background:var(--ink);color:var(--lime);padding:6px 10px}
 
-/* 03 ideia */
-.ideia{background:radial-gradient(ellipse at 78% 50%,#3a1a6b 0%,#150a26 55%,#07040d 100%)}
-.ideia .esq{position:absolute;left:72px;top:190px;width:760px}
-.ideia h2{font-size:120px;line-height:.98;margin:20px 0 26px}
-.ideia h2 span{color:var(--lime)}
-.ideia .lead{font-size:21px;max-width:600px;opacity:.9}
-.ideia .frasco{position:absolute;left:900px;top:150px;width:330px;height:430px;background:#fff;display:grid;place-items:center}
-.ideia .frasco img{width:300px;height:auto}
-.ideia .aromas{position:absolute;left:1270px;top:150px;width:270px;display:flex;flex-direction:column;gap:14px}
-.aroma{display:flex;align-items:center;gap:14px;padding:12px 14px;border:2px solid rgba(242,241,233,.16);background:rgba(5,5,5,.25);transition:border-color .25s,transform .25s}
-.aroma:hover{border-color:var(--lime);transform:translateX(-4px)}
-.aroma i{width:26px;height:26px;border-radius:50%;flex:none;box-shadow:0 0 0 3px rgba(255,255,255,.12)}
-.aroma b{font-family:var(--titulo);font-weight:900;font-size:26px;text-transform:uppercase;letter-spacing:-.01em}
-.ideia .nota{position:absolute;left:900px;top:600px;font-family:var(--mono);font-size:11px;opacity:.55;width:640px}
-/* 04 solução */
-.solucao h2{position:absolute;left:72px;top:118px;font-size:62px;width:900px}
-.solucao h2 span{color:var(--lime)}
-.pecas{position:absolute;left:72px;right:72px;top:268px;bottom:84px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.peca{position:relative;background:var(--ink-3);border:2px solid rgba(242,241,233,.12);display:flex;flex-direction:column;overflow:hidden;transition:border-color .25s,transform .25s}
+/* 01 a 75 LAB */
+.lab .esq{position:absolute;left:72px;top:140px;width:660px}
+.lab h2{font-size:78px;margin:18px 0 18px}
+.lab h2 span{color:var(--teal)}
+.lab .lead{font-size:19px;margin-bottom:40px}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid rgba(5,5,5,.16)}
+.nums div{padding:22px 18px 0 0}
+.nums b{display:block;font-family:var(--titulo);font-weight:900;font-size:96px;line-height:.9;color:var(--ink)}
+.nums div>span{display:block;font-size:15px;line-height:1.35;margin-top:10px;opacity:.75;max-width:170px}
+.lab .dir{position:absolute;left:820px;top:140px;width:708px}
+.cadeia{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0 44px;counter-reset:c}
+.cadeia li{position:relative;background:var(--ink);color:var(--paper);padding:16px 16px 14px;font-family:var(--titulo);font-weight:900;font-size:26px;text-transform:uppercase;line-height:1}
+.cadeia li::before{counter-increment:c;content:'0' counter(c);display:block;font-family:var(--mono);font-size:11px;color:var(--lime);letter-spacing:.12em;margin-bottom:8px}
+.cadeia li.on{background:var(--lime);color:var(--ink)}.cadeia li.on::before{color:var(--ink)}
+.casa{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:16px;border-top:2px solid rgba(5,5,5,.16);border-left:2px solid rgba(5,5,5,.16)}
+.casa li{list-style:none;display:grid;place-items:center;height:78px;border-right:2px solid rgba(5,5,5,.16);border-bottom:2px solid rgba(5,5,5,.16);font-family:var(--titulo);font-weight:700;font-size:28px;text-transform:uppercase;letter-spacing:.02em;transition:background .25s}
+.casa li:hover{background:var(--lime)}
+
+/* 03 key visual */
+.kvs h2{position:absolute;left:72px;top:110px;font-size:62px;width:1200px}
+.kvs h2 span{color:var(--lime)}
+.kvf{position:absolute;left:72px;top:212px;width:960px;height:540px;margin:0;overflow:hidden;border:2px solid rgba(242,241,233,.14);cursor:zoom-in}
+.kvf img{width:100%;height:100%;object-fit:cover;display:block}
+.pt{position:absolute;width:42px;height:42px;margin:-21px 0 0 -21px;border-radius:50%;background:var(--lime);color:var(--ink);font:700 16px/42px var(--mono);font-style:normal;text-align:center;box-shadow:0 0 0 6px rgba(192,238,78,.28);animation:pulso 2.2s ease-in-out infinite}
+@keyframes pulso{50%{box-shadow:0 0 0 12px rgba(192,238,78,.08)}}
+.porque{position:absolute;left:1072px;top:212px;width:456px;list-style:none}
+.porque li{padding:0 0 20px;margin-bottom:20px;border-bottom:2px solid rgba(242,241,233,.12)}
+.porque li b{display:flex;align-items:center;gap:12px;font-family:var(--titulo);font-weight:900;font-size:28px;text-transform:uppercase;line-height:1;margin-bottom:8px}
+.porque li b i{width:30px;height:30px;border-radius:50%;background:var(--lime);color:var(--ink);font:700 13px/30px var(--mono);font-style:normal;text-align:center;flex:none}
+.porque li span{font-size:16px;line-height:1.42;opacity:.85}
+.kvs .desdobra{position:absolute;left:72px;top:770px;width:960px;font-size:15px;opacity:.75}
+
+/* 04 sistema */
+.sistema h2{position:absolute;left:72px;top:110px;font-size:62px;width:1200px}
+.sistema h2 span{color:var(--teal)}
+.jornada{position:absolute;left:72px;right:72px;top:212px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.etapa-j{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:10px;padding-bottom:12px;border-bottom:3px solid var(--ink)}
+.etapa-j::after{content:'';flex:1;height:0}
+.jornada>div:not(:last-child) .etapa-j::after{content:'→';flex:none;margin-left:auto;font-family:var(--corpo);font-size:20px;line-height:1;color:var(--teal)}
+.conj{margin-top:18px;background:#fff;border:2px solid rgba(5,5,5,.12);padding:22px 24px 20px;position:relative}
+.conj .peso{display:flex;gap:4px;align-items:flex-end;height:30px;margin-bottom:12px}
+.conj .peso i{width:12px;background:var(--ink)}
+.conj .peso i:nth-child(1){height:10px}.conj .peso i:nth-child(2){height:20px}.conj .peso i:nth-child(3){height:30px}
+.conj .peso i.off{background:rgba(5,5,5,.14)}
+.conj h3{font-family:var(--titulo);font-weight:900;font-size:44px;text-transform:uppercase;line-height:1}
+.conj .faz{font-size:17px;font-weight:600;margin:6px 0 14px;color:var(--teal)}
+.conj dl{display:grid;grid-template-columns:96px 1fr;gap:8px 10px;font-size:15px;line-height:1.35}
+.conj dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.55;padding-top:3px}
+.ligacoes{position:absolute;left:72px;top:540px;height:132px;width:1456px;overflow:visible}
+.ligacoes path{fill:none;stroke:var(--teal);stroke-width:3;stroke-dasharray:600;stroke-dashoffset:600;transition:stroke-dashoffset 1.2s ease .5s}
+.sistema.ativa .ligacoes path{stroke-dashoffset:0}
+.resultado-esp{position:absolute;left:372px;right:372px;top:672px;background:var(--ink);color:var(--paper);padding:20px 26px;display:flex;gap:18px;align-items:center;font-size:18px;line-height:1.4}
+.resultado-esp b{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);flex:none}
+.estrategia{position:absolute;left:72px;bottom:62px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;opacity:.7}
+
+/* 05 peças */
+.pecas-t h2{position:absolute;left:72px;top:110px;font-size:62px;width:1000px}
+.pecas-t h2 span{color:var(--lime)}
+.grupos{position:absolute;left:72px;right:72px;top:212px;bottom:70px;display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:auto 1fr;gap:12px 20px}
+.grupo{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:0 0 10px;border-bottom:3px solid var(--lime);display:flex;justify-content:space-between}
+.grupo span{opacity:.6;font-weight:400}
+.g-pesada{grid-column:1/3}.g-media{grid-column:3/4}.g-leve{grid-column:4/6}
+.peca{position:relative;background:var(--ink-3);border:2px solid rgba(242,241,233,.12);display:flex;flex-direction:column;overflow:hidden;transition:border-color .25s,transform .25s;cursor:zoom-in}
 .peca:hover{border-color:var(--lime);transform:translateY(-4px)}
 .peca .img{height:300px;background-size:cover;background-position:center;position:relative}
-.peca .img.recorte{background-color:#f3f3f1;background-size:contain;background-repeat:no-repeat}
-.peca .resolve{position:absolute;left:0;top:0;display:flex;align-items:center;gap:8px;background:var(--lime);color:var(--ink);font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.1em;padding:9px 12px;text-transform:uppercase}
-.peca .resolve svg{width:16px;height:16px}
-.peca .corpo{padding:20px 22px 22px}
-.peca h3{font-family:var(--titulo);font-weight:900;font-size:36px;text-transform:uppercase;line-height:1;margin-bottom:10px}
-.peca p{font-size:16px;line-height:1.42;opacity:.85}
-.peca .ver{position:absolute;right:14px;bottom:14px;font-family:var(--mono);font-size:11px;opacity:.55;letter-spacing:.08em}
+.peca .resolve{position:absolute;left:0;top:0;display:flex;align-items:center;gap:8px;background:var(--lime);color:var(--ink);font-family:var(--mono);font-weight:700;font-size:11px;letter-spacing:.08em;padding:8px 10px;text-transform:uppercase}
+.peca .resolve svg{width:14px;height:14px}
+.peca .corpo{padding:16px 18px 18px}
+.peca .canal{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);opacity:.9}
+.peca h3{font-family:var(--titulo);font-weight:900;font-size:30px;text-transform:uppercase;line-height:1;margin:6px 0 8px}
+.peca p{font-size:15px;line-height:1.4;opacity:.85}
+.peca .ver{position:absolute;right:12px;bottom:10px;font-family:var(--mono);font-size:10px;opacity:.5;letter-spacing:.08em}
 
 /* 05 medir */
 .medir h2{position:absolute;left:72px;top:118px;font-size:70px;width:1000px}
@@ -155,12 +199,15 @@ h1,h2,.num{font-family:var(--titulo);font-weight:900;text-transform:uppercase;le
 .tela.ativa .anima{opacity:1;transform:none}
 .tela.ativa .d1{transition-delay:.12s}.tela.ativa .d2{transition-delay:.24s}.tela.ativa .d3{transition-delay:.36s}.tela.ativa .d4{transition-delay:.48s}
 
-/* lightbox */
-#caixa{position:fixed;inset:0;background:rgba(5,5,5,.92);display:none;z-index:50;align-items:center;justify-content:center;gap:24px;padding:40px}
+/* lightbox: na loja, recortada e executivo */
+#caixa{position:fixed;inset:0;background:rgba(5,5,5,.94);display:none;z-index:50;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:40px}
 #caixa.aberta{display:flex}
-#caixa img{max-width:46vw;max-height:84vh;object-fit:contain;background:#f3f3f1}
+#caixa img{max-width:86vw;max-height:72vh;object-fit:contain;background:#fff}
+#caixa .abas{display:flex;gap:8px}
+#caixa .abas button,#caixa .abas a{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--paper);background:transparent;border:2px solid rgba(242,241,233,.4);padding:10px 14px;text-decoration:none}
+#caixa .abas button.on{background:var(--lime);color:var(--ink);border-color:var(--lime)}
 #caixa .fechar{position:absolute;top:22px;right:28px;font-family:var(--mono);font-size:13px;color:var(--paper);border:2px solid var(--paper);padding:10px 14px;background:transparent}
-#caixa p{position:absolute;bottom:26px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:12px;color:var(--paper);opacity:.7}
+#caixa p{font-family:var(--mono);font-size:12px;color:var(--paper);opacity:.75}
 
 /* cursor em dois tons: aparece sobre o lime, o teal e as fotos */
 #cursor{position:fixed;left:0;top:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 2px var(--paper),0 0 0 4px rgba(5,5,5,.35);pointer-events:none;z-index:99;transition:width .18s,height .18s,margin .18s,background .18s;display:none}
@@ -174,24 +221,46 @@ body.tem-mouse #cursor{display:block}
 
   <!-- 01 · capa -->
   <section class="tela capa ativa" data-titulo="Capa">
-    <div class="foto" data-img="kv" role="img" aria-label="Casal escolhendo Limpol Perfumes numa ponta de gôndola iluminada"></div>
+    <div class="foto" data-img="kv" role="img" aria-label="Key visual Limpol Perfumes: as cinco fragrâncias numa bancada de mármore, com flores e luz da manhã"></div>
     <div class="veu"></div>
-    <div class="marcas"><div class="par"><img class="bb" src="assets/bombril.webp" alt="Bombril"><span class="x">×</span><img class="lab" src="assets/75lab-lime.png" alt="75 LAB"></div><span class="eyebrow">Reunião de 27/10/2026</span></div>
+    <div class="marcas"><div class="par"><img class="bb" src="assets/bombril.webp" alt="Bombril"><span class="x">×</span><img class="lab" src="assets/75lab-lime.png" alt="75 LAB"></div></div>
     <div class="texto">
-      <span class="eyebrow anima"><b>(Pitch)</b> Trade para inovação · Limpol Perfumes</span>
+      <span class="eyebrow anima"><b>(Pitch)</b> Reunião de 27/10/2026 · Limpol Perfumes</span>
       <h1 class="anima d1">Inovação boa é a que <span>a loja vende.</span></h1>
-      <p class="lead anima d2">Uma proposta para a inovação da Bombril ser vista, entendida e escolhida na gôndola.</p>
+      <p class="lead anima d2">Do key visual à gôndola: a linha Limpol Perfumes vista, entendida e escolhida em toda a rede.</p>
       <button class="botao anima d3 seta" data-ir="1">Ver a proposta</button>
     </div>
     <div class="grao"></div>
-    <aside class="roteiro" hidden>Abrimos com a ideia inteira numa frase: inovação boa é a que a loja vende. A Bombril já provou que sabe lançar; o que propomos hoje é garantir que cada lançamento seja visto, entendido e escolhido na gôndola, com prova loja a loja. São seis telas, e no fim pedimos uma decisão simples.</aside>
+    <aside class="roteiro" hidden>Abrimos com a ideia inteira numa frase: inovação boa é a que a loja vende. A Bombril já provou que sabe lançar; o que propomos é levar Limpol Perfumes do key visual até a gôndola de toda a rede, para a linha ser vista, entendida e escolhida, com prova loja a loja. No fim, pedimos uma decisão simples.</aside>
   </section>
 
-  <!-- 02 · desafio -->
+  <!-- 02 · a 75 LAB -->
+  <section class="tela claro lab" data-tela="75lab" data-titulo="A 75 LAB">
+    <div class="marcas"><div class="par"><img class="bb" src="assets/bombril.webp" alt="Bombril" style="height:34px"><span class="x">×</span><img class="lab" src="assets/75lab-black.png" alt="75 LAB" style="height:20px"></div><span class="eyebrow"><b>(01)</b> Quem faz</span></div>
+    <div class="esq">
+      <h2 class="anima">Trade feito por quem <span>já esteve dos dois lados do balcão.</span></h2>
+      <p class="lead anima d1">Varejo e indústria na mesma mesa. A 75 LAB cria, fabrica, instala e mede o ponto de venda.</p>
+      <div class="nums anima d2">
+        <div><b>+<span data-conta="15">0</span></b><span>anos entre indústria e varejo</span></div>
+        <div><b data-conta="18">0</b><span>marcas atendidas em 2025 e 2026</span></div>
+        <div><b data-conta="4">0</b><span>plataformas próprias de trade</span></div>
+      </div>
+    </div>
+    <div class="dir">
+      <span class="eyebrow anima"><b>De ponta a ponta</b></span>
+      <ol class="cadeia anima d1"><li>Estratégia</li><li class="on">Key visual</li><li class="on">Projeto executivo</li><li>Produção</li><li>Instalação</li><li>Medição</li></ol>
+      <span class="eyebrow anima d2"><b>Marcas que confiam na 75 LAB</b></span>
+      <ul class="casa anima d2"><li>Lactalis</li><li>Nestlé</li><li>Seara</li><li>Panco</li><li>Savencia</li><li>Panasonic</li><li>SEMP</li><li>Alltak</li></ul>
+    </div>
+    <p class="fonte">Fonte: 75 LAB, carteira de clientes de 2025 e 2026.</p>
+    <aside class="roteiro" hidden>Antes da proposta, quem somos. A 75 LAB nasceu da soma de quem operou loja no varejo com quem respondeu por P&amp;L na indústria: são mais de 15 anos vivendo a distância entre o plano comercial e a gôndola. Fazemos de ponta a ponta, da estratégia ao key visual, ao projeto executivo, à produção, à instalação e à medição. Em 2025 e 2026 atendemos 18 marcas, entre elas Lactalis, Nestlé, Seara e Panco.</aside>
+  </section>
+
+  <!-- 03 · desafio -->
   <section class="tela claro desafio" data-titulo="O desafio">
     <div class="marcas"><div class="par"><img class="bb" src="assets/bombril.webp" alt="Bombril" style="height:34px"><span class="x">×</span><img class="lab" src="assets/75lab-black.png" alt="75 LAB" style="height:20px"></div></div>
     <div class="esq anima">
-      <span class="eyebrow"><b>(01)</b> O que já está dando certo</span>
+      <span class="eyebrow">O que já está dando certo</span>
       <div class="num" style="margin-top:18px">+<span data-conta="8.2" data-casas="1">0</span><small>%</small></div>
       <div class="rotulo"><b>R$ 1,729 bilhão</b>receita líquida da Bombril em 2025</div>
       <p class="contexto">O crescimento veio com inovação: lava-roupas e limpador perfumado.</p>
@@ -210,54 +279,80 @@ body.tem-mouse #cursor{display:block}
     <aside class="roteiro" hidden>A Bombril cresceu 8,2% em 2025 e chegou a R$ 1,729 bilhão de receita líquida, puxada por inovação. O desafio agora é a gôndola: a inovação precisa ser vista no meio de tantos frascos, entendida em segundos e escolhida entre cinco fragrâncias e quatro tamanhos. Ypê e Veja também disputam o perfume, então aroma sozinho não diferencia.</aside>
   </section>
 
-  <!-- 03 · a ideia -->
-  <section class="tela ideia escuro" data-titulo="A ideia">
-    <div class="esq">
-      <span class="eyebrow anima"><b>(03)</b> A ideia</span>
-      <h2 class="anima d1">Escolha o perfume <span>da sua casa.</span></h2>
-      <p class="lead anima d2">A gôndola vira lugar de escolha: cada fragrância com cor, nome e um motivo para levar.</p>
-    </div>
-    <div class="frasco anima d2"><img src="assets/limpol-lavander.png" alt="Limpol Perfumes Lavander"></div>
-    <div class="aromas anima d3">
-      <div class="aroma"><i style="background:#7b4fc0"></i><b>Lavander</b></div>
-      <div class="aroma"><i style="background:#3a7bd5"></i><b>Blue Flowers</b></div>
-      <div class="aroma"><i style="background:#4caf6a"></i><b>Jardin</b></div>
-      <div class="aroma"><i style="background:#e0457b"></i><b>Passion</b></div>
-      <div class="aroma"><i style="background:#c9a23f"></i><b>Luxury</b></div>
-    </div>
-    <p class="nota anima d3">As cinco fragrâncias do lançamento de 2025 (SuperHiper/ABRAS, 17/03/2025). Cores ilustrativas; o sortimento é o da rede escolhida.</p>
-    <div class="grao"></div>
-    <aside class="roteiro" hidden>A ideia é simples: transformar a gôndola num lugar de escolha. Em vez de cinco frascos parecidos, o shopper encontra cinco perfumes, cada um com cor, nome e um motivo para levar. Escolha o perfume da sua casa vira a frase que organiza peças, comunicação e promotor.</aside>
+  <!-- 04 · o key visual -->
+  <section class="tela escuro kvs" data-tela="kv" data-titulo="O key visual">
+    <div class="marcas"><span class="eyebrow"><b>(03)</b> O key visual</span><span class="dica">Clique na imagem para ampliar</span></div>
+    <h2 class="anima">Uma imagem que <span>já mostra a escolha.</span></h2>
+    <figure class="kvf anima d1" data-amplia="assets/kv-final.jpg"><img data-img="kv" src="assets/kv-final.jpg" alt="Key visual Limpol Perfumes: Escolha o perfume da sua casa"><i class="pt" style="left:37%;top:13%">1</i><i class="pt" style="left:47%;top:44%">2</i><i class="pt" style="left:13%;top:52%">3</i><i class="pt" style="left:88%;top:36%">4</i></figure>
+    <ol class="porque anima d2">
+      <li><b><i>1</i>A frase</b><span>"Escolha o perfume da sua casa." Limpar vira uma escolha pessoal, não só uma tarefa.</span></li>
+      <li><b><i>2</i>A linha inteira</b><span>As cinco fragrâncias juntas, embalagens reais: o shopper vê na hora que existe opção.</span></li>
+      <li><b><i>3</i>Cor e flor</b><span>Cada perfume com a sua cor e a sua flor. Vira o código de todas as peças.</span></li>
+      <li><b><i>4</i>Casa clara</b><span>Bancada limpa e luz da manhã: o resultado que o shopper quer levar para casa.</span></li>
+    </ol>
+    <p class="desdobra anima d3">A frase, as cores e as flores se repetem na testeira, no display, no wobbler e na régua: o shopper reconhece a campanha em qualquer ponto da loja.</p>
+    <aside class="roteiro" hidden>Este é o key visual. Ele faz quatro trabalhos. A frase transforma limpar numa escolha pessoal. A linha inteira aparece junta, com as embalagens reais, para o shopper entender que existe opção. Cada fragrância tem a sua cor e a sua flor, e esse código se repete em todas as peças. E a cena mostra o resultado que ele quer: casa clara e perfumada. É daqui que saem todas as peças da loja.</aside>
   </section>
 
-  <!-- 04 · a solução -->
-  <section class="tela escuro solucao" data-titulo="A solução">
-    <div class="marcas"><span class="eyebrow"><b>(04)</b> A solução</span><span class="dica">Clique nas peças para ver na loja e recortada</span></div>
-    <h2 class="anima">Três peças. <span>Cada uma derruba uma barreira.</span></h2>
-    <div class="pecas">
-      <article class="peca anima d1" data-loja="assets/ponta-loja.jpg" data-recorte="assets/ponta-recorte.webp" data-nome="Ponta Prisma iluminada" data-peca="Ponta Prisma iluminada">
-        <div class="img" data-img="cena" style="background-image:url(assets/ponta-loja.jpg)"><span class="resolve"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg>Resolve: ser vista</span></div>
-        <div class="corpo"><h3>Ponta Prisma iluminada</h3><p>A linha inteira num ponto só, com luz e preço à vista no fim do corredor.</p></div>
-        <span class="ver">Ver na loja e recortada +</span>
-      </article>
-      <article class="peca anima d2" data-loja="assets/caixa-loja.jpg" data-recorte="assets/caixa-recorte.webp" data-nome="Caixa Prisma na prateleira" data-peca="Caixa Prisma na prateleira">
-        <div class="img" data-img="cena" style="background-image:url(assets/caixa-loja.jpg)"><span class="resolve"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6.5"/><path d="M6.3 6.2a1.8 1.8 0 1 1 2.5 1.6c-.5.2-.8.6-.8 1.2M8 11v.5"/></svg>Resolve: ser entendida</span></div>
-        <div class="corpo"><h3>Caixa Prisma na prateleira</h3><p>Explica uso e benefício onde o shopper já está. Monta em minutos, cabe em loja pequena.</p></div>
-        <span class="ver">Ver na loja e recortada +</span>
-      </article>
-      <article class="peca anima d3" data-loja="assets/regua-recorte.webp" data-recorte="assets/regua-recorte.webp" data-nome="Régua de escolha" data-peca="Régua de escolha">
-        <div class="img recorte" style="background-image:url(assets/regua-recorte.webp)"><span class="resolve"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg>Resolve: ser escolhida</span></div>
-        <div class="corpo"><h3>Régua de escolha</h3><p>Cada fragrância com cor e nome na prateleira: decisão em segundos, sem abrir o frasco.</p></div>
-        <span class="ver">Ver a peça +</span>
-      </article>
+  <!-- 05 · o sistema de peças -->
+  <section class="tela claro sistema" data-tela="sistema" data-titulo="Como as peças funcionam">
+    <div class="marcas"><span class="eyebrow"><b>(04)</b> Como as peças funcionam</span></div>
+    <h2 class="anima">Três conjuntos. <span>Uma jornada até o carrinho.</span></h2>
+    <div class="jornada">
+      <div class="anima d1"><div class="etapa-j">Entrada e área promocional</div>
+        <div class="conj"><div class="peso"><i></i><i></i><i></i></div><h3>Pesadas</h3><p class="faz">Atraem e fazem sentir o perfume</p>
+          <dl><dt>Peças</dt><dd>Display aramado e estação de aroma</dd><dt>Canal</dt><dd>Hiper e atacarejo</dd><dt>Resolve</dt><dd>Ser vista</dd><dt>Resultado</dt><dd>A linha é notada e experimentada</dd></dl></div></div>
+      <div class="anima d2"><div class="etapa-j">Corredor de limpeza</div>
+        <div class="conj"><div class="peso"><i></i><i></i><i class="off"></i></div><h3>Médias</h3><p class="faz">Expõem e explicam junto da categoria</p>
+          <dl><dt>Peças</dt><dd>Display de chão em polionda</dd><dt>Canal</dt><dd>Supermercado</dd><dt>Resolve</dt><dd>Ser entendida</dd><dt>Resultado</dt><dd>As cinco fragrâncias explicadas no corredor</dd></dl></div></div>
+      <div class="anima d3"><div class="etapa-j">Prateleira</div>
+        <div class="conj"><div class="peso"><i></i><i class="off"></i><i class="off"></i></div><h3>Leves</h3><p class="faz">Convertem na hora da decisão</p>
+          <dl><dt>Peças</dt><dd>Wobbler e régua de escolha</dd><dt>Canal</dt><dd>Todos, inclusive vizinhança</dd><dt>Resolve</dt><dd>Ser escolhida</dd><dt>Resultado</dt><dd>Decisão em segundos, mais giro</dd></dl></div></div>
     </div>
-    <p class="fonte">Medidas, materiais e lojas são definidos no diagnóstico.</p>
-    <aside class="roteiro" hidden>São três peças, e cada uma derruba uma barreira do desafio. A ponta iluminada faz a linha ser vista no fim do corredor. A caixa na prateleira explica o que muda e monta em minutos, inclusive em loja pequena. A régua de escolha organiza as fragrâncias por cor e nome. Cliquem em cada peça para ver na loja e recortada.</aside>
+    <svg class="ligacoes" viewBox="0 0 1456 70" preserveAspectRatio="none"><path d="M234 0 V30 Q234 50 254 50 H560 Q580 50 580 70"/><path d="M728 0 V70"/><path d="M1222 0 V30 Q1222 50 1202 50 H896 Q876 50 876 70"/></svg>
+    <div class="resultado-esp anima d4"><b>Resultado esperado</b>Mais lojas com a linha exposta e mais giro por loja, lido semana a semana.</div>
+    <p class="estrategia">Estratégia: fazer a inovação ser vista, entendida e escolhida, com o mesmo KV do início ao fim da loja.</p>
+    <aside class="roteiro" hidden>As peças trabalham juntas, na ordem em que o shopper anda. As pesadas ficam na entrada e na área promocional do hiper e do atacarejo: atraem e deixam sentir o perfume. As médias ficam no corredor do supermercado, junto da categoria, e explicam as cinco fragrâncias. As leves estão em todos os canais, inclusive na vizinhança, e ajudam a decidir na prateleira. Cada conjunto resolve uma barreira, e juntos levam a mais lojas com a linha exposta e mais giro.</aside>
   </section>
 
-  <!-- 05 · medir -->
+  <!-- 06 · as peças -->
+  <section class="tela escuro pecas-t" data-tela="pecas" data-titulo="As peças">
+    <div class="marcas"><span class="eyebrow"><b>(05)</b> As peças</span><span class="dica">Clique: na loja, recortada e o projeto executivo</span></div>
+    <h2 class="anima">Cinco peças, <span>um só key visual.</span></h2>
+    <div class="grupos">
+      <div class="grupo g-pesada anima">Pesadas <span>hiper e atacarejo</span></div><div class="grupo g-media anima">Média <span>supermercado</span></div><div class="grupo g-leve anima">Leves <span>todos os canais</span></div>
+      <article class="peca anima d1" data-peca="Display aramado" data-conjunto="pesada" data-nome="Display aramado" data-loja="assets/aramado-loja.jpg" data-recorte="assets/aramado-recorte.jpg" data-tecnico="assets/executivo/P1_display-aramado.png" data-pdf="assets/executivo/P1_display-aramado.pdf" data-dxf="assets/executivo/P1_display-aramado.dxf">
+        <div class="img" data-img="cena" style="background-image:url(assets/aramado-loja.jpg)"><span class="resolve"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg>Resolve: ser vista</span></div>
+        <div class="corpo"><span class="canal">Ponta · 100 x 180 cm</span><h3>Display aramado</h3><p>A linha inteira, organizada por cor, na ponta do corredor.</p></div>
+        <span class="ver">Loja · recorte · executivo +</span>
+      </article>
+      <article class="peca anima d1" data-peca="Estação de aroma" data-conjunto="pesada" data-nome="Estação de aroma" data-loja="assets/estacao-loja.jpg" data-recorte="assets/estacao-recorte.jpg" data-tecnico="assets/executivo/P2_estacao-de-aroma.png" data-pdf="assets/executivo/P2_estacao-de-aroma.pdf" data-dxf="assets/executivo/P2_estacao-de-aroma.dxf">
+        <div class="img" data-img="cena" style="background-image:url(assets/estacao-loja.jpg)"><span class="resolve"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg>Resolve: ser vista</span></div>
+        <div class="corpo"><span class="canal">Ativação · fim de semana</span><h3>Estação de aroma</h3><p>O shopper sente o perfume e leva o que gostou.</p></div>
+        <span class="ver">Loja · recorte · executivo +</span>
+      </article>
+      <article class="peca anima d2" data-peca="Display de polionda" data-conjunto="media" data-nome="Display de polionda" data-loja="assets/polionda-loja.jpg" data-recorte="assets/polionda-recorte.jpg" data-tecnico="assets/executivo/P3_display-polionda.png" data-pdf="assets/executivo/P3_display-polionda.pdf" data-dxf="assets/executivo/P3_display-polionda.dxf">
+        <div class="img" data-img="cena" style="background-image:url(assets/polionda-loja.jpg)"><span class="resolve"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6.5"/><path d="M6.3 6.2a1.8 1.8 0 1 1 2.5 1.6c-.5.2-.8.6-.8 1.2M8 11v.5"/></svg>Resolve: ser entendida</span></div>
+        <div class="corpo"><span class="canal">Chão · 60 x 160 cm</span><h3>Display de polionda</h3><p>Explica as cinco fragrâncias junto da categoria. Monta em 10 minutos.</p></div>
+        <span class="ver">Loja · recorte · executivo +</span>
+      </article>
+      <article class="peca anima d3" data-peca="Wobbler" data-conjunto="leve" data-nome="Wobbler" data-loja="assets/wobbler-loja.jpg" data-recorte="assets/wobbler-recorte.jpg" data-tecnico="assets/executivo/P4_wobbler.png" data-pdf="assets/executivo/P4_wobbler.pdf" data-dxf="assets/executivo/P4_wobbler.dxf">
+        <div class="img" data-img="cena" style="background-image:url(assets/wobbler-loja.jpg)"><span class="resolve"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg>Resolve: ser escolhida</span></div>
+        <div class="corpo"><span class="canal">Prateleira · Ø 12 cm</span><h3>Wobbler</h3><p>Chama o olho para cada fragrância, sem cobrir o preço.</p></div>
+        <span class="ver">Loja · recorte · executivo +</span>
+      </article>
+      <article class="peca anima d3" data-peca="Régua de escolha" data-conjunto="leve" data-nome="Régua de escolha" data-loja="assets/regua-loja.jpg" data-recorte="assets/regua-recorte.jpg" data-tecnico="assets/executivo/P5_regua-de-escolha.png" data-pdf="assets/executivo/P5_regua-de-escolha.pdf" data-dxf="assets/executivo/P5_regua-de-escolha.dxf">
+        <div class="img" data-img="cena" style="background-image:url(assets/regua-loja.jpg)"><span class="resolve"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg>Resolve: ser escolhida</span></div>
+        <div class="corpo"><span class="canal">Porta-preço · 100 x 4 cm</span><h3>Régua de escolha</h3><p>Cor e nome de cada perfume onde a mão decide.</p></div>
+        <span class="ver">Loja · recorte · executivo +</span>
+      </article>
+    </div>
+    <aside class="roteiro" hidden>Estas são as cinco peças, todas do mesmo key visual. Nas pesadas, o display aramado leva a linha inteira por cor para a ponta, e a estação de aroma deixa o shopper sentir antes de levar. Na média, o display de polionda explica as fragrâncias no corredor e monta em dez minutos. Nas leves, o wobbler e a régua ajudam a decidir na prateleira. Cliquem em cada uma para ver na loja, recortada e o projeto executivo.</aside>
+  </section>
+
+  <!-- 07 · medir -->
   <section class="tela claro medir" data-titulo="Como medimos">
-    <div class="marcas"><span class="eyebrow"><b>(05)</b> Como medimos</span></div>
+    <div class="marcas"><span class="eyebrow"><b>(06)</b> Como medimos</span></div>
     <h2 class="anima">Você sabe em que loja a inovação <span>está na gôndola.</span></h2>
     <div class="trilha">
       <svg class="linha" preserveAspectRatio="none" viewBox="0 0 1456 20"><path class="tracejado" d="M70 10 H1300"/></svg>
@@ -271,14 +366,14 @@ body.tem-mouse #cursor{display:block}
     <aside class="roteiro" hidden>Toda peça sai da fábrica com um QR único. No One Shot, o promotor escaneia ao instalar e a foto com GPS prova que a peça entrou na loja. No On Timing, uma tag no display avisa todo dia se ela segue montada e no lugar. Tudo cai num painel que mostra, loja a loja, onde a inovação está montada, no lugar e abastecida.</aside>
   </section>
 
-  <!-- 06 · o projeto e a entrega 75 LAB -->
+  <!-- 08 · o projeto e a entrega 75 LAB -->
   <section class="tela escuro piloto" data-titulo="O projeto">
-    <div class="marcas"><span class="eyebrow"><b>(06)</b> O projeto</span></div>
+    <div class="marcas"><span class="eyebrow"><b>(07)</b> O projeto</span></div>
     <div class="esq">
       <h2 class="anima">12 semanas. <span>Da fábrica à gôndola, em toda a rede.</span></h2>
       <p class="lead anima d1">Sem fase de teste: a primeira onda já entra em todas as lojas da rede escolhida.</p>
       <div class="onda anima d2">
-        <div class="seg s1"><i></i><em>Sem. 1 e 2</em><b>Visita e criação</b></div>
+        <div class="seg s1"><i></i><em>Sem. 1 e 2</em><b>KV e executivo</b></div>
         <div class="seg s2"><i style="transition-delay:.25s"></i><em>Sem. 3 a 6</em><b>Produção com QR</b></div>
         <div class="seg s3"><i style="transition-delay:.5s"></i><em>Sem. 7</em><b>Instalação</b></div>
         <div class="seg s4"><i style="transition-delay:.75s"></i><em>Sem. 8 a 12</em><b>Leitura ao vivo, loja a loja</b></div>
@@ -288,20 +383,20 @@ body.tem-mouse #cursor{display:block}
       <span class="eyebrow anima"><b>75 LAB</b> faz de ponta a ponta</span>
       <ol class="etapas anima d1">
         <li><b>Visita às lojas</b><span>Fotos e medidas da rede escolhida, sem pedir planilha.</span></li>
-        <li><b>Criação e protótipo</b><span>Peças testadas na rotina da loja.</span></li>
-        <li><b>Produção e instalação</b><span>Fábrica, logística e montagem com foto.</span></li>
-        <li><b>Treino da operação</b><span>Guia de montagem e reposição para promotores.</span></li>
+        <li><b>KV e peças</b><span>KV final no Photoshop e as cinco peças nos três conjuntos.</span></li>
+        <li><b>Projeto executivo</b><span>Cada peça desenhada para fabricar: medida, material e encaixe.</span></li>
+        <li><b>Produção e instalação</b><span>Fábrica, logística, montagem com foto e treino dos promotores.</span></li>
         <li><b>Leitura semanal</b><span>Loja a loja: montada, no lugar e abastecida.</span></li>
       </ol>
       <div class="resultado anima d2">No fim, <b>a prova loja a loja</b> para levar a próxima inovação a outras redes.</div>
     </div>
     <p class="fonte">Prazo ajustado na visita às lojas da rede escolhida.</p>
-    <aside class="roteiro" hidden>Em 12 semanas a inovação sai da fábrica e chega a todas as lojas da rede escolhida, sem fase de teste. A 75 LAB faz de ponta a ponta: visita as lojas, cria, produz com QR, instala, treina os promotores e lê toda semana, loja a loja, onde a peça está montada, no lugar e abastecida. Essa prova leva a próxima inovação a outras redes.</aside>
+    <aside class="roteiro" hidden>Em 12 semanas a inovação sai da fábrica e chega a todas as lojas da rede escolhida, sem fase de teste. A 75 LAB faz de ponta a ponta: visita as lojas, fecha o key visual e as peças, desenha o projeto executivo de cada uma, produz com QR, instala, treina os promotores e lê toda semana, loja a loja, onde a peça está montada, no lugar e abastecida. Essa prova leva a próxima inovação a outras redes.</aside>
   </section>
 
-  <!-- 07 · próximo passo -->
+  <!-- 09 · próximo passo -->
   <section class="tela lime fim" data-titulo="Próximo passo">
-    <div class="marcas"><span class="eyebrow">(07) Próximo passo</span></div>
+    <div class="marcas"><span class="eyebrow">(08) Próximo passo</span></div>
     <div class="pergunta">
       <h2 class="anima">Qual inovação e qual rede vocês escolhem para começar?</h2>
       <div class="acoes anima d1">
@@ -317,10 +412,10 @@ body.tem-mouse #cursor{display:block}
   </section>
 
   <div id="nav"><i></i></div>
-  <div id="cont">01 / 07</div>
+  <div id="cont">01 / 09</div>
 </div></div>
 
-<div id="caixa" role="dialog" aria-label="Peça ampliada"><button class="fechar">Fechar</button><img id="cx1" alt=""><img id="cx2" alt=""><p id="cxt"></p></div>
+<div id="caixa" role="dialog" aria-label="Peça ampliada"><button class="fechar">Fechar</button><p id="cxt"></p><img id="cx1" alt=""><div class="abas" id="cxa"></div></div>
 <div id="cursor"></div>
 
 <script>
@@ -356,26 +451,29 @@ body.tem-mouse #cursor{display:block}
   });
   // clique na metade direita avança, na esquerda volta (fora de botões, links e peças)
   document.getElementById('wrap').addEventListener('click',e=>{
-    if(e.target.closest('a,button,.peca'))return;
+    if(e.target.closest('a,button,.peca,[data-amplia]'))return;
     ir(e.clientX>innerWidth/2?atual+1:atual-1);
   });
   // toque: deslizar
   let x0=null;addEventListener('touchstart',e=>{x0=e.touches[0].clientX;},{passive:true});
   addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)ir(dx<0?atual+1:atual-1);x0=null;});
-  // peças: na loja e recortada, lado a lado
-  const caixa=document.getElementById('caixa');
+  // peças: na loja, recortada e o projeto executivo (com PDF e DXF)
+  const caixa=document.getElementById('caixa'),cx1=document.getElementById('cx1'),cxa=document.getElementById('cxa'),cxt=document.getElementById('cxt');
   function fechar(){caixa.classList.remove('aberta');}
-  document.querySelectorAll('.peca').forEach(p=>p.addEventListener('click',()=>{
-    document.getElementById('cx1').src=p.dataset.loja;document.getElementById('cx2').src=p.dataset.recorte;
-    document.getElementById('cx2').style.display=p.dataset.loja===p.dataset.recorte?'none':'block';
-    document.getElementById('cxt').textContent=p.dataset.nome+(p.dataset.loja===p.dataset.recorte?'':' · na loja e recortada');
+  function abrir(titulo,vistas,links){
+    cxt.textContent=titulo;cxa.innerHTML='';
+    vistas.forEach(([rot,src],i)=>{const b=document.createElement('button');b.textContent=rot;b.onclick=e=>{e.stopPropagation();cx1.src=src;cxa.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));};cxa.appendChild(b);if(!i)b.click();});
+    (links||[]).forEach(([rot,href])=>{const a=document.createElement('a');a.textContent=rot;a.href=href;a.target='_blank';a.rel='noopener';a.onclick=e=>e.stopPropagation();cxa.appendChild(a);});
     caixa.classList.add('aberta');
-  }));
+  }
+  document.querySelectorAll('.peca').forEach(p=>p.addEventListener('click',e=>{e.stopPropagation();
+    abrir(p.dataset.nome,[['Na loja',p.dataset.loja],['Recortada',p.dataset.recorte],['Projeto executivo',p.dataset.tecnico]],[['Executivo em PDF',p.dataset.pdf],['DXF',p.dataset.dxf]]);}));
+  document.querySelectorAll('[data-amplia]').forEach(f=>f.addEventListener('click',e=>{e.stopPropagation();abrir('Key visual Limpol Perfumes',[['Key visual',f.dataset.amplia]]);}));
   caixa.addEventListener('click',e=>{if(e.target===caixa||e.target.classList.contains('fechar'))fechar();});
   // cursor em dois tons (só com mouse)
   const cur=document.getElementById('cursor');
   addEventListener('mousemove',e=>{document.body.classList.add('tem-mouse');cur.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';
-    cur.classList.toggle('sobre',!!e.target.closest('a,button,.peca'));},{passive:true});
+    cur.classList.toggle('sobre',!!e.target.closest('a,button,.peca,[data-amplia]'));},{passive:true});
   addEventListener('touchstart',()=>document.body.classList.remove('tem-mouse'),{passive:true});
 })();
 </script>

@@ -176,7 +176,7 @@ body.tem-mouse #cursor{display:block}
 
   <!-- 01 · capa -->
   <section class="tela capa ativa" data-titulo="Capa">
-    <div class="foto" role="img" aria-label="Casal escolhendo Limpol Perfumes numa ponta de gôndola iluminada"></div>
+    <div class="foto" data-img="kv" role="img" aria-label="Casal escolhendo Limpol Perfumes numa ponta de gôndola iluminada"></div>
     <div class="veu"></div>
     <div class="marcas"><div class="par"><img class="bb" src="assets/bombril.webp" alt="Bombril"><span class="x">×</span><img class="lab" src="assets/75lab-lime.png" alt="75 LAB"></div><span class="eyebrow">Reunião de 27/10/2026</span></div>
     <div class="texto">
@@ -186,6 +186,7 @@ body.tem-mouse #cursor{display:block}
       <button class="botao anima d3 seta" data-ir="1">Ver a proposta</button>
     </div>
     <div class="grao"></div>
+    <aside class="roteiro" hidden>Abrimos com a ideia inteira numa frase: inovação boa é a que a loja vende. A Bombril já provou que sabe lançar; o que propomos hoje é garantir que cada lançamento seja visto, entendido e escolhido na gôndola, com prova loja a loja. São seis telas, e no fim pedimos uma decisão simples.</aside>
   </section>
 
   <!-- 02 · desafio -->
@@ -208,6 +209,7 @@ body.tem-mouse #cursor{display:block}
       <div class="disputa anima d3"><span class="selo">Atenção</span>Ypê e Veja também disputam o perfume. Aroma sozinho não diferencia.</div>
     </div>
     <p class="fonte">Fontes: Bombril, Relações com Investidores, Press Release 4T25 (receita, volume e inovações); SuperHiper/ABRAS, 17/03/2025 (Limpol Perfumes: 5 fragrâncias, 500 ml a 5 L); Ypê, set/2025; Veja, site oficial.</p>
+    <aside class="roteiro" hidden>A Bombril cresceu 8,2% em 2025 e chegou a R$ 1,729 bilhão de receita líquida, puxada por inovação. O desafio agora é a gôndola: a inovação precisa ser vista no meio de tantos frascos, entendida em segundos e escolhida entre cinco fragrâncias e quatro tamanhos. Ypê e Veja também disputam o perfume, então aroma sozinho não diferencia.</aside>
   </section>
 
   <!-- 03 · a ideia -->
@@ -227,6 +229,7 @@ body.tem-mouse #cursor{display:block}
     </div>
     <p class="nota anima d3">As cinco fragrâncias do lançamento de 2025 (SuperHiper/ABRAS, 17/03/2025). Cores ilustrativas; o sortimento do piloto é o da rede escolhida.</p>
     <div class="grao"></div>
+    <aside class="roteiro" hidden>A ideia é simples: transformar a gôndola num lugar de escolha. Em vez de cinco frascos parecidos, o shopper encontra cinco perfumes, cada um com cor, nome e um motivo para levar. Escolha o perfume da sua casa vira a frase que organiza peças, comunicação e promotor.</aside>
   </section>
 
   <!-- 04 · a solução -->
@@ -234,23 +237,24 @@ body.tem-mouse #cursor{display:block}
     <div class="marcas"><span class="eyebrow"><b>(04)</b> A solução</span><span class="dica">Clique nas peças para ver na loja e recortada</span></div>
     <h2 class="anima">Três peças. <span>Cada uma derruba uma barreira.</span></h2>
     <div class="pecas">
-      <article class="peca anima d1" data-loja="assets/ponta-loja.jpg" data-recorte="assets/ponta-recorte.webp" data-nome="Ponta Prisma iluminada">
-        <div class="img" style="background-image:url(assets/ponta-loja.jpg)"><span class="resolve"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg>Resolve: ser vista</span></div>
+      <article class="peca anima d1" data-loja="assets/ponta-loja.jpg" data-recorte="assets/ponta-recorte.webp" data-nome="Ponta Prisma iluminada" data-peca="Ponta Prisma iluminada">
+        <div class="img" data-img="cena" style="background-image:url(assets/ponta-loja.jpg)"><span class="resolve"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg>Resolve: ser vista</span></div>
         <div class="corpo"><h3>Ponta Prisma iluminada</h3><p>A linha inteira num ponto só, com luz e preço à vista no fim do corredor.</p></div>
         <span class="ver">Ver na loja e recortada +</span>
       </article>
-      <article class="peca anima d2" data-loja="assets/caixa-loja.jpg" data-recorte="assets/caixa-recorte.webp" data-nome="Caixa Prisma na prateleira">
-        <div class="img" style="background-image:url(assets/caixa-loja.jpg)"><span class="resolve"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6.5"/><path d="M6.3 6.2a1.8 1.8 0 1 1 2.5 1.6c-.5.2-.8.6-.8 1.2M8 11v.5"/></svg>Resolve: ser entendida</span></div>
+      <article class="peca anima d2" data-loja="assets/caixa-loja.jpg" data-recorte="assets/caixa-recorte.webp" data-nome="Caixa Prisma na prateleira" data-peca="Caixa Prisma na prateleira">
+        <div class="img" data-img="cena" style="background-image:url(assets/caixa-loja.jpg)"><span class="resolve"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6.5"/><path d="M6.3 6.2a1.8 1.8 0 1 1 2.5 1.6c-.5.2-.8.6-.8 1.2M8 11v.5"/></svg>Resolve: ser entendida</span></div>
         <div class="corpo"><h3>Caixa Prisma na prateleira</h3><p>Explica uso e benefício onde o shopper já está. Monta em minutos, cabe em loja pequena.</p></div>
         <span class="ver">Ver na loja e recortada +</span>
       </article>
-      <article class="peca anima d3" data-loja="assets/regua-recorte.webp" data-recorte="assets/regua-recorte.webp" data-nome="Régua de escolha">
+      <article class="peca anima d3" data-loja="assets/regua-recorte.webp" data-recorte="assets/regua-recorte.webp" data-nome="Régua de escolha" data-peca="Régua de escolha">
         <div class="img recorte" style="background-image:url(assets/regua-recorte.webp)"><span class="resolve"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg>Resolve: ser escolhida</span></div>
         <div class="corpo"><h3>Régua de escolha</h3><p>Cada fragrância com cor e nome na prateleira: decisão em segundos, sem abrir o frasco.</p></div>
         <span class="ver">Ver a peça +</span>
       </article>
     </div>
-    <p class="fonte">Imagens de simulação para a proposta. Medidas, materiais e lojas são definidos no diagnóstico.</p>
+    <p class="fonte">Medidas, materiais e lojas são definidos no diagnóstico.</p>
+    <aside class="roteiro" hidden>São três peças, e cada uma derruba uma barreira do desafio. A ponta iluminada faz a linha ser vista no fim do corredor. A caixa na prateleira explica o que muda e monta em minutos, inclusive em loja pequena. A régua de escolha organiza as fragrâncias por cor e nome. Cliquem em cada peça para ver na loja e recortada.</aside>
   </section>
 
   <!-- 05 · medir -->
@@ -266,6 +270,7 @@ body.tem-mouse #cursor{display:block}
         <div class="parada forte anima d4"><div class="bola"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M10 52V30M24 52V18M38 52V36M52 52V12"/></svg></div><span class="tag">No seu painel</span><h3>Execução e giro juntos</h3><p>Lojas com a inovação exposta, ruptura e venda no mesmo relatório.</p></div>
       </div>
     </div>
+    <aside class="roteiro" hidden>Toda peça sai da fábrica com um QR único. No One Shot, o promotor escaneia ao instalar e a foto com GPS prova que a peça entrou na loja. No On Timing, uma tag no display avisa todo dia se ela segue montada e no lugar. Tudo cai num painel junto com ruptura e venda.</aside>
   </section>
 
   <!-- 06 · piloto e entrega 75 LAB -->
@@ -289,6 +294,7 @@ body.tem-mouse #cursor{display:block}
       <div class="resultado anima d2">No fim, <b>uma decisão com número</b>: ampliar, ajustar ou parar.</div>
     </div>
     <p class="fonte">Piloto ilustrativo para discussão. Número de lojas, rede e prazo são ajustados no diagnóstico com os dados da Bombril.</p>
+    <aside class="roteiro" hidden>Propomos um piloto de 12 semanas em 30 lojas parecidas, divididas em três grupos: como hoje, com as peças e com as peças mais a experiência de aroma. A 75 LAB faz de ponta a ponta, do diagnóstico à leitura. No fim, a Bombril decide com número: ampliar, ajustar ou parar.</aside>
   </section>
 
   <!-- 07 · próximo passo -->
@@ -305,6 +311,7 @@ body.tem-mouse #cursor{display:block}
       <div><img src="assets/75lab-black.png" alt="75 LAB">Daniel Coimbra, CEO · daniel.coimbra@75lab.com.br<br>Caique Becker, Head de Trade · caique.becker@75lab.com.br<br>contato@75lab.com.br · 75lab.com.br</div>
       <small>75 LAB Estratégia, Design e Produção Ltda · CNPJ 55.470.982/0001-77 · CENU, Torre Norte, Av. das Nações Unidas, 12.901, Brooklin, São Paulo, SP</small>
     </div>
+    <aside class="roteiro" hidden>Para começar, precisamos de duas escolhas: qual inovação entra no teste e em qual rede. Com isso, em uma semana trazemos o diagnóstico das lojas e o desenho final das peças. O botão leva direto para o nosso WhatsApp.</aside>
   </section>
 
   <div id="nav"><i></i></div>
